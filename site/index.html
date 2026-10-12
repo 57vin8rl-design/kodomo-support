@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>こども支援案内板</title>
+<meta name="description" content="交通遺児、児童養護施設、障害のある子ども、子ども食堂など、子どもを支える団体への寄付先を地域から探せる案内板です。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--APP-->
+<div id="app">
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <button class="brand" id="brand" type="button"><span class="brand-mark" aria-hidden="true"></span><span id="site-name">こども支援案内板</span></button>
+      <button class="nav-link" id="nav-about" type="button">運営について</button>
+    </div>
+  </header>
+
+  <main id="view-home" class="wrap">
+    <section class="hero">
+      <p class="hero-kicker" id="tagline">子どもたちのために、できることから。</p>
+      <h1>必要としている場所へ、<br>支援を直接届けるための案内板。</h1>
+      <p class="hero-note">このサイトは寄付金を預からず、手数料も受け取りません。寄付は各団体の公式ページやほしい物リストへ直接届きます。</p>
+    </section>
+
+    <section class="finder" aria-labelledby="finder-title">
+      <h2 id="finder-title" class="finder-title">あなたの地元から探す</h2>
+      <div class="finder-grid">
+        <label class="field">
+          <span class="field-label">都道府県</span>
+          <select id="f-pref"><option value="">全国</option></select>
+        </label>
+        <label class="field">
+          <span class="field-label">市区町村</span>
+          <select id="f-city" disabled><option value="">すべて</option></select>
+        </label>
+        <label class="field field-wide">
+          <span class="field-label">キーワード（団体名・送りたい物など）</span>
+          <input id="f-q" type="search" placeholder="例：おむつ、文房具、子ども食堂" autocomplete="off">
+        </label>
+      </div>
+
+      <fieldset class="chips-set">
+        <legend class="field-label">何を届けたい？</legend>
+        <div class="chips" id="f-methods"></div>
+      </fieldset>
+      <fieldset class="chips-set">
+        <legend class="field-label">どんな子どもを支えたい？</legend>
+        <div class="chips" id="f-cats"></div>
+      </fieldset>
+    </section>
+
+    <section aria-live="polite">
+      <div class="result-head">
+        <p class="result-count" id="result-count"></p>
+        <button class="text-btn" id="f-clear" type="button" hidden>条件をすべて解除</button>
+      </div>
+      <div class="cards" id="results"></div>
+      <div class="empty" id="empty" hidden></div>
+    </section>
+  </main>
+
+  <main id="view-org" class="wrap" hidden></main>
+
+  <main id="view-about" class="wrap prose" hidden>
+    <button class="back" type="button" data-back>← 一覧にもどる</button>
+    <h1>運営について</h1>
+    <p>この案内板は、寄付をしたい大人が迷わず支援先にたどり着けるように、子どもを支える団体の情報をまとめたものです。運営は完全に無償のボランティアで、広告・手数料・アフィリエイトはありません。</p>
+    <dl class="facts">
+      <div><dt>運営者</dt><dd id="op-name">準備中</dd></div>
+      <div><dt>お問い合わせ</dt><dd id="op-contact">準備中</dd></div>
+    </dl>
+
+    <h2>お金と物の流れ</h2>
+    <p>このサイトはお金も物も預かりません。寄付は、各団体の公式ページや、団体が公開しているAmazonほしい物リストなどから、団体へ直接届きます。</p>
+
+    <h2>掲載の基準</h2>
+    <ul>
+      <li>子どもを支える活動をしている団体・施設であること</li>
+      <li>公式サイトや法人登記などで、団体の実在を確認できること</li>
+      <li>寄付の受付先が団体自身の公式な窓口であること</li>
+      <li>個人の家庭は掲載しません。団体を通じた支援をご案内します</li>
+      <li>子どもの写真や、個人が特定できる情報は載せません</li>
+    </ul>
+    <p>各団体のページには、運営が確認した日と確認の方法を載せています。「確認済み」は、掲載時点で団体と窓口が実在することを確かめたという意味で、寄付の使い道や団体の活動すべてを保証するものではありません。寄付の前に、各団体の公式情報もご確認ください。</p>
+
+    <h2>個人情報について</h2>
+    <p>会員登録やログインはありません。寄付先を探すために、個人情報を入力していただく場面はありません。</p>
+
+    <h2>掲載の申請・情報の修正</h2>
+    <p id="apply-text">掲載の申請や、情報の修正・削除のご依頼は、お問い合わせ先までご連絡ください。</p>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <p>掲載情報は確認時点のものです。寄付の内容や使い道は、各団体へご確認ください。</p>
+      <p class="foot-small"><span id="foot-name">こども支援案内板</span>　広告・手数料なしで運営しています</p>
+    </div>
+  </footer>
+</div>
+<!--/APP-->
+<script src="app.js"></script>
+</body>
+</html>
