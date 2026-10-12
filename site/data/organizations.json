@@ -1,0 +1,91 @@
+[
+  {
+    "id": "demo-001",
+    "isDemo": true,
+    "name": "【ダミー】ひまわり子ども食堂",
+    "categories": ["child-cafeteria", "family-support"],
+    "prefecture": "千葉県",
+    "city": "東金市",
+    "description": "動作確認用の架空団体です。月2回、地域の子どもに無料で夕食を出している想定。",
+    "needs": ["お米", "調味料", "使い捨て容器"],
+    "officialWebsite": "https://example.com/",
+    "supportLinks": [
+      { "type": "wishlist", "url": "https://example.com/wishlist" },
+      { "type": "volunteer", "url": "https://example.com/volunteer" }
+    ],
+    "verifiedAt": null,
+    "verificationMethod": "未確認（ダミー）",
+    "status": "active"
+  },
+  {
+    "id": "demo-002",
+    "isDemo": true,
+    "name": "【ダミー】あおぞら学園",
+    "categories": ["children-homes"],
+    "prefecture": "千葉県",
+    "city": "千葉市",
+    "description": "動作確認用の架空の児童養護施設です。小学生から高校生まで暮らしている想定。",
+    "needs": ["文房具", "冬用の靴下", "高校生向けの参考書"],
+    "officialWebsite": "https://example.com/",
+    "supportLinks": [
+      { "type": "wishlist", "url": "https://example.com/wishlist" },
+      { "type": "goods", "url": "https://example.com/goods" }
+    ],
+    "verifiedAt": null,
+    "verificationMethod": "未確認（ダミー）",
+    "status": "active"
+  },
+  {
+    "id": "demo-003",
+    "isDemo": true,
+    "name": "【ダミー】交通遺児ささえあいの会",
+    "categories": ["traffic-orphans", "family-support"],
+    "prefecture": "東京都",
+    "city": "新宿区",
+    "description": "動作確認用の架空団体です。交通事故で親を亡くした子どもの進学を支える想定。",
+    "needs": ["奨学金への寄付", "進学相談のボランティア"],
+    "officialWebsite": "https://example.com/",
+    "supportLinks": [
+      { "type": "money", "url": "https://example.com/donate" },
+      { "type": "volunteer", "url": "https://example.com/volunteer" }
+    ],
+    "verifiedAt": null,
+    "verificationMethod": "未確認（ダミー）",
+    "status": "active"
+  },
+  {
+    "id": "demo-004",
+    "isDemo": true,
+    "name": "【ダミー】こもれび医療的ケア児の会",
+    "categories": ["disability"],
+    "prefecture": "神奈川県",
+    "city": "横浜市",
+    "description": "動作確認用の架空団体です。医療的ケアが必要な子どもと家族を支える想定。",
+    "needs": ["大きいサイズのおむつ", "おしりふき", "加湿器"],
+    "officialWebsite": "https://example.com/",
+    "supportLinks": [
+      { "type": "wishlist", "url": "https://example.com/wishlist" },
+      { "type": "money", "url": "https://example.com/donate" }
+    ],
+    "verifiedAt": null,
+    "verificationMethod": "未確認（ダミー）",
+    "status": "active"
+  },
+  {
+    "id": "demo-005",
+    "isDemo": true,
+    "name": "【ダミー】みなと里親支援センター",
+    "categories": ["children-homes", "family-support"],
+    "prefecture": "大阪府",
+    "city": "大阪市",
+    "description": "動作確認用の架空団体です。里親家庭と子どもの生活を支える想定。",
+    "needs": ["絵本", "ランドセル"],
+    "officialWebsite": "https://example.com/",
+    "supportLinks": [
+      { "type": "goods", "url": "https://example.com/goods" }
+    ],
+    "verifiedAt": null,
+    "verificationMethod": "未確認（ダミー）",
+    "status": "active"
+  }
+]
