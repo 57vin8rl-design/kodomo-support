@@ -1,0 +1,17 @@
+name: 初期設定（ラベル作成）
+on:
+  push: { branches: [main], paths: [".github/workflows/setup-labels.yml"] }
+  workflow_dispatch:
+permissions: { issues: write }
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          gh label create "承認" --color 1f5f9e --description "タップで反映" --force -R "$GITHUB_REPOSITORY"
+          gh label create "停止" --color 9a4b00 --description "掲載を一時停止" --force -R "$GITHUB_REPOSITORY"
+          gh label create "自動通知" --color d7dee5 --force -R "$GITHUB_REPOSITORY"
+          gh label create "要確認" --color f0b429 --force -R "$GITHUB_REPOSITORY"
+          gh label create "再確認" --color f0b429 --force -R "$GITHUB_REPOSITORY"
+          gh label create "掲載候補" --color 2e8b57 --force -R "$GITHUB_REPOSITORY"
+        env: { GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} }
